@@ -34,7 +34,7 @@ namespace OPP_Practice
                     {
                         throw new Exception("Ink is too low");
                     }
-                    _inkLevel = Math.Round(value, 0);// math.round method
+                    _inkLevel = Math.Round(value/5, 0)*5;// math.round method https://stackoverflow.com/questions/1531695/round-to-nearest-five
                 }
             } }
         public double MaxInk { get; set; }
@@ -46,7 +46,7 @@ namespace OPP_Practice
             Brand = "Bic";
             InkColor = "Black";
             InkLevel = 100; //Default at 100%
-            MaxInk = 10; // This one has the value of mL
+            MaxInk = 13; // This one has the value of mL
             HasLid = true; //true means it has cap on
         }
 
@@ -56,14 +56,14 @@ namespace OPP_Practice
         {   
             //Default 10 characters ink mL dropped at 0.5 mL
             MaxInk -= 0.5;
-            InkLevel = (MaxInk/10)*100;
+            InkLevel = (MaxInk/13)*100;
         }
 
         //One character equals 0.05mL of ink usage
         public void Write(double characterCount)
         {
             MaxInk -= 0.05 * characterCount;
-            InkLevel = (MaxInk/10)*100;
+            InkLevel = (MaxInk/13)*100;
         }
 
 
