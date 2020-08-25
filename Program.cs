@@ -6,7 +6,9 @@ namespace OPP_Practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!  ");
+            Pen pencil = new Pen();
+
+            Console.WriteLine($"{pencil.HasLid} \n" + $"{pencil.Brand} \n" + $"{pencil.InkColor} \n" + $"{pencil.InkLevel} \n" + $"{pencil.MaxInk} \n");
         }
     }
 }
