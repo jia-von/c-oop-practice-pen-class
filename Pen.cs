@@ -34,7 +34,7 @@ namespace OPP_Practice
                     {
                         throw new Exception("Ink is too low");
                     }
-                    _inkLevel = value;
+                    _inkLevel = Math.Round(value, 0);// math.round method
                 }
             } }
         public double MaxInk { get; set; }

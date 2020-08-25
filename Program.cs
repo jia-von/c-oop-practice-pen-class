@@ -7,7 +7,7 @@ namespace OPP_Practice
         static void Main(string[] args)
         {
             Pen pencil = new Pen();
-            pencil.Write();
+            pencil.Write(1);
             Console.WriteLine($"The brand of the pen is: {pencil.Brand}");
             Console.WriteLine($"The colour of the pen is: {pencil.InkColor}");
             Console.WriteLine($"Whether the pen has lid: {pencil.InkColor}");
