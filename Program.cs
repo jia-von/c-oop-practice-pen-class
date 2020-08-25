@@ -7,8 +7,9 @@ namespace OPP_Practice
         static void Main(string[] args)
         {
             Pen pencil = new Pen();
+            pencil.Write();
+            Console.WriteLine(pencil.InkLevel);
 
-            Console.WriteLine($"{pencil.HasLid} \n" + $"{pencil.Brand} \n" + $"{pencil.InkColor} \n" + $"{pencil.InkLevel} \n" + $"{pencil.MaxInk} \n");
         }
     }
 }

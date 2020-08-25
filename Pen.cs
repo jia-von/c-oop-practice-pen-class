@@ -7,7 +7,7 @@ namespace OPP_Practice
     //Create a 'Pen' class that has the following properties:
     class Pen
     {
-        public int characterCount;
+        public double characterCount;
         //properties to be created is Brand, InkColor, InkLevel, MaxInk, HasLid
         public string Brand { get; set; } //Brand is a string cause it is just names
         public string InkColor { get; set; } //Colour is a string because it is just names
@@ -36,7 +36,7 @@ namespace OPP_Practice
                     _inkLevel = value;
                 }
             } }
-        public int MaxInk { get; set; }
+        public double MaxInk { get; set; }
         public bool HasLid { get; set; } //Boolean cause it is only yes/no cap.
 
         //create a constructor
@@ -55,7 +55,7 @@ namespace OPP_Practice
         // assuming 10 characters for the version without parameters
         public void Write()
         {
-            characterCount = 10;
+            InkLevel -= 0.5;
         }
 
         //One character equals 0.05mL of ink usage
