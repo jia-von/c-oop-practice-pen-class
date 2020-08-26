@@ -65,7 +65,6 @@ namespace OPP_Practice
             //MaxInk -= 0.5;
             //InkLevel = (MaxInk / 10) * 100;
             InkLevel = ((MaxInk - 0.5) / MaxInk) * 100;
-            MaxInk -= 0.5;
             
         }
 
@@ -74,9 +73,8 @@ namespace OPP_Practice
         public void Write(double characterCount)
         {
             //MaxInk -= 0.05 * characterCount;
-            //InkLevel = (MaxInk/10)*100;
-            InkLevel = (MaxInk - (0.05 * characterCount) / MaxInk) * 100;
-            MaxInk -= 0.05 * characterCount;
+            //InkLevel = (MaxInk/maxInk)*100;
+            InkLevel = ((MaxInk - (0.05 * characterCount)) / MaxInk) * 100;
         }
 
 
