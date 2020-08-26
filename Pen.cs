@@ -46,24 +46,37 @@ namespace OPP_Practice
             Brand = "Bic";
             InkColor = "Black";
             InkLevel = 100; //Default at 100%
-            MaxInk = 13; // This one has the value of mL
+            MaxInk = 10; // This one has the value of mL
             HasLid = true; //true means it has cap on
         }
-
+        
+        public Pen(string brand, string inkColor, double maxInk, double inkLevel, bool hasLid)
+        {
+            Brand = brand;
+            InkColor = inkColor;
+            InkLevel = inkLevel;
+            MaxInk = maxInk; // This one has the value of mL
+            HasLid = hasLid; //true means it has cap on
+        }
 
         // assuming 10 characters for the version without parameters
         public void Write()
-        {   
-            //Default 10 characters ink mL dropped at 0.5 mL
+        {
+            //MaxInk -= 0.5;
+            //InkLevel = (MaxInk / 10) * 100;
+            InkLevel = ((MaxInk - 0.5) / MaxInk) * 100;
             MaxInk -= 0.5;
-            InkLevel = (MaxInk/13)*100;
+            
         }
 
         //One character equals 0.05mL of ink usage
+        //TODO make the MaxInk/10 dynamic
         public void Write(double characterCount)
         {
+            //MaxInk -= 0.05 * characterCount;
+            //InkLevel = (MaxInk/10)*100;
+            InkLevel = (MaxInk - (0.05 * characterCount) / MaxInk) * 100;
             MaxInk -= 0.05 * characterCount;
-            InkLevel = (MaxInk/13)*100;
         }
 
 
